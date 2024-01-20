@@ -6,7 +6,8 @@ from sklearn import metrics
 import numpy as np
 
 import os, tqdm, json
-from data import DATA_DIR
+from root import DATA_DIR
+
 
 LANGUAGE = 'de'
 scores = {LANGUAGE: {'micro-f1': [], 'macro-f1': []} for LANGUAGE in ['de', 'fr', 'it']}

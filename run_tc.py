@@ -44,9 +44,8 @@ from torch.nn import CrossEntropyLoss
 from datasets import load_dataset, concatenate_datasets
 import transformers
 import transformers.adapters.composition as ac
+from adapters import AdapterConfig, AdapterTrainer, AdapterArguments
 from transformers import (
-    AdapterConfig,
-    AdapterTrainer,
     AutoConfig,
     AutoModelForSequenceClassification,
     AutoTokenizer,
@@ -54,7 +53,6 @@ from transformers import (
     EvalPrediction,
     EarlyStoppingCallback,
     HfArgumentParser,
-    MultiLingAdapterArguments,
     Trainer,
     TrainingArguments,
     default_data_collator,
@@ -102,7 +100,7 @@ def main():
     # See all possible arguments in src/transformers/training_args.py or by passing the --help flag to this script.
     # We now keep distinct sets of args, for a cleaner separation of concerns.
 
-    parser = HfArgumentParser((ModelArguments, DataArguments, TrainingArguments, MultiLingAdapterArguments))
+    parser = HfArgumentParser((ModelArguments, DataArguments, TrainingArguments, AdapterArguments))
     if len(sys.argv) == 2 and sys.argv[1].endswith(".json"):
         # If we pass only one argument to the script and it's the path to a json file,
         # let's parse it to get our arguments.

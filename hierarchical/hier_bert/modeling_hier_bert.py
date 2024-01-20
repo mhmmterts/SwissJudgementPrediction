@@ -2,7 +2,8 @@ import numpy as np
 import torch
 from torch import nn
 from torch.nn import MSELoss, CrossEntropyLoss, BCEWithLogitsLoss
-from transformers import BertPreTrainedModel, BertModel, ModelWithHeadsAdaptersMixin, add_start_docstrings
+from adapters import ModelWithHeadsAdaptersMixin
+from transformers import BertPreTrainedModel, BertModel, add_start_docstrings
 from transformers.file_utils import add_start_docstrings_to_model_forward, add_code_sample_docstrings
 from transformers.modeling_outputs import SequenceClassifierOutput
 from transformers.models.bert.modeling_bert import BERT_START_DOCSTRING, BERT_INPUTS_DOCSTRING, _TOKENIZER_FOR_DOC, \

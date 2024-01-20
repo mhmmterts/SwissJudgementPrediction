@@ -2,7 +2,8 @@ import numpy as np
 import torch
 from torch import nn
 from torch.nn import MSELoss, CrossEntropyLoss, BCEWithLogitsLoss
-from transformers import RobertaPreTrainedModel, RobertaModel, ModelWithHeadsAdaptersMixin, add_start_docstrings
+from adapters import ModelWithHeadsAdaptersMixin
+from transformers import RobertaPreTrainedModel, RobertaModel, add_start_docstrings
 from transformers.file_utils import add_start_docstrings_to_model_forward, add_code_sample_docstrings
 from transformers.modeling_outputs import SequenceClassifierOutput
 from transformers.models.bert.modeling_bert import _TOKENIZER_FOR_DOC, _CHECKPOINT_FOR_DOC, _CONFIG_FOR_DOC
