@@ -120,7 +120,7 @@ tensorboardX==2.2
 termcolor==2.4.0
 thinc
 threadpoolctl==3.2.0
-tokenizers
+tokenizers==0.10.2
 tqdm==4.66.1
 transformers==4.16.2
 translations==0.1.3
